@@ -4,6 +4,7 @@ import { Statistics } from './Statistics/Statistics';
 import { Section } from './Section/Section';
 import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
 import { Notification } from './Notification/Notification';
+import { Box } from './Box.styled';
 
 export class App extends Component {
   state = {
@@ -36,7 +37,7 @@ export class App extends Component {
     const { good, neutral, bad } = this.state;
     const options = Object.keys(this.state);
     return (
-      <div>
+      <Box>
         <CafeLogo />
         <Section title={'Please leave feedback'}>
           <FeedbackOptions
@@ -57,7 +58,7 @@ export class App extends Component {
             <Notification message="There is no feedback" />
           )}
         </Section>
-      </div>
+      </Box>
     );
   }
 }
